@@ -52,7 +52,7 @@ The main book recommendation comprises of three components: vector search for se
      - The script loops through book from `"Fiction"` and `"Nonfiction"` categories.  
      - Each description is classified using `generate_predictions()`, and results are stored in a DataFrame.
      - The predicted and actual labels are then compared. The accuracy is 77.83%, which is quite good.
-     **Using the prediction to complete the missing categories**:  
+     <br>**Using the prediction to complete the missing categories**:  
      - Books without a `"simple_categories"` label are identified.  
      - The model predicts categories for these books.  
      - The missing categories are merged back into the original dataset.  
@@ -75,7 +75,7 @@ The main book recommendation comprises of three components: vector search for se
       <br>**DataFrame Creation & Merging**:  
      - Converts **emotion scores** into a DataFrame.  
      - Merges results with the original book dataset on `isbn13`, ensuring each book has its associated **emotion scores**.  
-  This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
+  <br>This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
 
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
 <br> Credit: freeCodeCamp.org
