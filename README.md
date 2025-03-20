@@ -5,9 +5,10 @@ The data is obtained from Kaggle, which is then examined, cleaned and pre-proces
 <br> 
 <br> 
 **Setting up the Environment**
-The tutorial from freeCodeCamp.org is using Pycharm but this project is created using Conda environment with libraries in requirements.txt.
+<br> The tutorial from freeCodeCamp.org is using Pycharm but this project is created using Conda environment with libraries in requirements.txt.
 It is also necessary to obtain API keys from HuggingFace (free) and OpenAI (for a small fee) in order to run the vector search model.
 <br>
+<br> 
 **Exploratory Data Analysis**
 <br> 
 There are many missing values in the features. These are the summary of the actions taken to address those:
