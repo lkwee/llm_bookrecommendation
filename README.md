@@ -3,6 +3,7 @@
 The project is a book recommendation using open sourced LLM models from HuggingFace, Langchain, OpenAI.
 The data is obtained from Kaggle, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
 <br> 
+<br> 
 **Exploratory Data Analysis**
 <br> 
 There are many missing values in the features. These are the summary of the actions taken to address those:
