@@ -8,13 +8,13 @@ The data is obtained from Kaggle, which is then examined, cleaned and pre-proces
 <br> 
 There are many missing values in the features. These are the summary of the actions taken to address those:
 - subtitle: there are many missing values which is expected as some books just have main title and no subtitle
-     Action: combine subtitle into title in a new column, and use this new column for the model.
+     <br> Action: combine subtitle into title in a new column, and use this new column for the model.
 - description: when this value is missing, the row will be largely useless as the recommender system will be built according to the description of each book.
-     Action: an EDA reveals that there is little correlation between missing descriptions and other features such as 'num_pages', 'age_of_book' and 'average_rating'. So as the missing value is relatively small (<5%), the missing rows are removed.
+     <br> Action: an EDA reveals that there is little correlation between missing descriptions and other features such as 'num_pages', 'age_of_book' and 'average_rating'. So as the missing value is relatively small (<5%), the missing rows are removed.
 - categories: on top of missing values, there are too many categories (567 unique categories)
-     Action: we will use text classification later to refine and simplify the categories.
+     <br> Action: we will use text classification later to refine and simplify the categories.
 - average_rating, num_pages, ratings_count: when one value in one feature is missing, the other 2 values are also missing
-     Action: as the missing value is relatively small, the missing rows are removed.
+     <br> Action: as the missing value is relatively small, the missing rows are removed.
 - thumbnail: the missing thumbnail does not affect the recommender pipeline. These will be replaced by an image placeholder to indicate missing cover page in gradio apps.
 <br>
 The main book recommendation comprises of three components: vector search for semantic book recommendation, text classification to refine and simplify book categories and sentiment analysis to classify the tone of each book.
