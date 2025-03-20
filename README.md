@@ -52,14 +52,14 @@ The main book recommendation comprises of three components: vector search for se
      - The script loops through book from `"Fiction"` and `"Nonfiction"` categories.  
      - Each description is classified using `generate_predictions()`, and results are stored in a DataFrame.
      - The predicted and actual labels are then compared. The accuracy is 77.83%, which is quite good.
-     <br>**Using the prediction to complete the missing categories**:  
+      <br>**Using the prediction to complete the missing categories**:  
      - Books without a `"simple_categories"` label are identified.  
      - The model predicts categories for these books.  
      - The missing categories are merged back into the original dataset.  
-   <br>This approach allows **automatic categorization** of books **without labeled training data** using **zero-shot learning**, making it ideal for **unstructured datasets** where categories are missing or inconsistent. 
+      <br>This approach allows **automatic categorization** of books **without labeled training data** using **zero-shot learning**, making it ideal for **unstructured datasets** where categories are missing or inconsistent. 
      
 4. **Sentiment Analysis**
-  <br> This script performs **sentiment analysis** on book descriptions using a **pre-trained emotion classification model** (`j-hartmann/emotion-english-distilroberta-base`) from Hugging Face.  
+    <br> This script performs **sentiment analysis** on book descriptions using a **pre-trained emotion classification model** (`j-hartmann/emotion-english-distilroberta-base`) from Hugging Face.  
       <br>**Load Dataset**: Reads `books_with_categories.csv`, which contains book descriptions and ISBNs.  
       <br>**Initialize Sentiment Classifier**:  
      - Uses a **DistilRoBERTa-based** model fine-tuned for **emotion detection**.  
