@@ -2,11 +2,11 @@
 
 The project is a book recommendation using open sourced LLM models from HuggingFace, Langchain, OpenAI, by following a tutorial video by freeCodeCamp.org.
 The data is obtained from Kaggle, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
-
+<br> 
 There are three components in this project: vector search for semantic book recoomendation, text classification to refine and simplify book categories and sentiment analysis to classify the tone of each book.
-
+<br> 
 1. **Vector Search**
-   The script implements a **vector search pipeline** for retrieving books based on **semantic similarity**. It follows these key steps:  
+   <br> The script implements a **vector search pipeline** for retrieving books based on **semantic similarity**. It follows these key steps:  
      **Data Preparation**: The script loads a cleaned book dataset (`books_cleaned.csv`), extracts the `tagged_description` column, and saves it as a plain text file (`tagged_description.txt`).  
      **Text Processing**: The `TextLoader` reads the text file, and the `CharacterTextSplitter` splits the descriptions into chunks based on newline separators, ensuring that each description is treated as an independent document.  
      **Vector Embeddings**: Though not explicitly shown, an embedding model (e.g., `OpenAIEmbeddings`) would convert these text chunks into dense numerical vectors.  
@@ -18,7 +18,7 @@ There are three components in this project: vector search for semantic book reco
   This approach enables **content-based recommendations** using NLP embeddings, making it useful for applications like **book discovery, personalized recommendations, or search engines**.
 
 2. **Text Classification**
-  The original book categories are numerous (567 unique categories) and the aim here is to simplify them in order to complement the book recommendation system.
+  <br> The original book categories are numerous (567 unique categories) and the aim here is to simplify them in order to complement the book recommendation system.
   This script implements **text classification** for books using a **zero-shot learning approach** with `facebook/bart-large-mnli`, a pre-trained NLP model from Hugging Face.
      **Category Mapping**: The `category_mapping` dictionary simplifies book genres into broader categories (`Fiction`, `Nonfiction`, `Children's Fiction`, etc.), which are assigned to books via `.map()`.
      These broarder mapping is based on the top categories in the original dataset.
@@ -38,12 +38,11 @@ There are three components in this project: vector search for semantic book reco
   This approach allows **automatic categorization** of books **without labeled training data** using **zero-shot learning**, making it ideal for **unstructured datasets** where categories are missing or inconsistent. 
      
 3. **Sentiment Analysis**
-  This script performs **sentiment analysis** on book descriptions using a **pre-trained emotion classification model** (`j-hartmann/emotion-english-distilroberta-base`) from Hugging Face.  
+  <br> This script performs **sentiment analysis** on book descriptions using a **pre-trained emotion classification model** (`j-hartmann/emotion-english-distilroberta-base`) from Hugging Face.  
      **Load Dataset**: Reads `books_with_categories.csv`, which contains book descriptions and ISBNs.  
      **Initialize Sentiment Classifier**:  
      - Uses a **DistilRoBERTa-based** model fine-tuned for **emotion detection**.  
-     - Classifies text into **seven emotion labels**: `"anger"`, `"disgust"`, `"fear"`, `"joy"`, `"sadness"`, `"surprise"`, and `"neutral"`.  
-     - Runs on **Apple Silicon GPU (`mps`)** for efficiency.  
+     - Classifies text into **seven emotion labels**: `"anger"`, `"disgust"`, `"fear"`, `"joy"`, `"sadness"`, `"surprise"`, and `"neutral"`.  .  
      **Processing Descriptions**:  
      - Each book's description is **split into sentences**.  
      - The classifier predicts emotions for each sentence.  
