@@ -15,10 +15,9 @@ There are many missing values in the features. These are the summary of the acti
      Action: as the missing value is relatively small, the missing rows are removed.
 - thumbnail: the missing thumbnail does not affect the recommender pipeline. These will be replaced by an image placeholder to indicate missing cover page in gradio apps.
 <br>
-<br>
 The main book recommendation comprises of three components: vector search for semantic book recommendation, text classification to refine and simplify book categories and sentiment analysis to classify the tone of each book.
+<br>
 
-<br> 
 1. **Vector Search**
    <br> The script implements a **vector search pipeline** for retrieving books based on **semantic similarity**. It follows these key steps:  
      **Data Preparation**: The script loads a cleaned book dataset (`books_cleaned.csv`), extracts the `tagged_description` column, and saves it as a plain text file (`tagged_description.txt`).  
