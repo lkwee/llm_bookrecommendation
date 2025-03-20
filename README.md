@@ -4,6 +4,7 @@ The project is a book recommendation using open sourced LLM models from HuggingF
 The data is obtained from Kaggle, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
 <br> 
 **Exploratory Data Analysis**
+<br> 
 There are many missing values in the features. These are the summary of the actions taken to address those:
 - subtitle: there are many missing values which is expected as some books just have main title and no subtitle
      Action: combine subtitle into title in a new column, and use this new column for the model.
