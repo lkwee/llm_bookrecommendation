@@ -1,9 +1,21 @@
 ### LLM BOOK RECOMMENDATION
 
-The project is a book recommendation using open sourced LLM models from HuggingFace, Langchain, OpenAI, by following a tutorial video by freeCodeCamp.org.
+The project is a book recommendation using open sourced LLM models from HuggingFace, Langchain, OpenAI.
 The data is obtained from Kaggle, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
 <br> 
-There are three components in this project: vector search for semantic book recoomendation, text classification to refine and simplify book categories and sentiment analysis to classify the tone of each book.
+**Exploratory Data Analysis**
+There are many missing values in the features. These are the summary of the actions taken to address those:
+- subtitle: there are many missing values which is expected as some books just have main title and no subtitle
+     Action: combine subtitle into title in a new column, and use this new column for the model.
+- description: when this value is missing, the row will be largely useless as the recommender system will be built according to the description of each book.
+     Action: an EDA reveals that there is little correlation between missing descriptions and other features such as 'num_pages', 'age_of_book' and 'average_rating'. So as the missing value is relatively small (<5%), the missing rows are removed.
+- categories: on top of missing values, there are too many categories (567 unique categories)
+     Action: we will use text classification later to refine and simplify the categories.
+- average_rating, num_pages, ratings_count: when one value in one feature is missing, the other 2 values are also missing
+     Action: as the missing value is relatively small, the missing rows are removed.
+- thumbnail: the missing thumbnail does not affect the recommender pipeline. These will be replaced by an image placeholder to indicate missing cover page in gradio apps.
+<br> 
+The main book recommendation comprises of three components: vector search for semantic book recommendation, text classification to refine and simplify book categories and sentiment analysis to classify the tone of each book. 
 <br> 
 1. **Vector Search**
    <br> The script implements a **vector search pipeline** for retrieving books based on **semantic similarity**. It follows these key steps:  
@@ -18,7 +30,7 @@ There are three components in this project: vector search for semantic book reco
   This approach enables **content-based recommendations** using NLP embeddings, making it useful for applications like **book discovery, personalized recommendations, or search engines**.
 
 2. **Text Classification**
-  <br> The original book categories are numerous (567 unique categories) and the aim here is to simplify them in order to complement the book recommendation system.
+  <br> As mentioned above, the original book categories are numerous and the aim here is to simplify them in order to complement the book recommendation system.
   This script implements **text classification** for books using a **zero-shot learning approach** with `facebook/bart-large-mnli`, a pre-trained NLP model from Hugging Face.
      **Category Mapping**: The `category_mapping` dictionary simplifies book genres into broader categories (`Fiction`, `Nonfiction`, `Children's Fiction`, etc.), which are assigned to books via `.map()`.
      These broarder mapping is based on the top categories in the original dataset.
@@ -57,3 +69,4 @@ There are three components in this project: vector search for semantic book reco
   This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
 
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
+Credit: freeCodeCamp.org
