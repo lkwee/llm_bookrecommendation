@@ -1,7 +1,7 @@
 ### LLM BOOK RECOMMENDATION
 
 The project is a book recommendation using open sourced LLM models from HuggingFace, Langchain and OpenAI.
-The data is obtained from Kaggle, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
+The data is obtained from Kaggle https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata/data, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
 <br> 
 <br> 
 **Setting up the Environment**
