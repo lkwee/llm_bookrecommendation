@@ -22,7 +22,7 @@ There are three components in this project: vector search for semantic book reco
   This script implements **text classification** for books using a **zero-shot learning approach** with `facebook/bart-large-mnli`, a pre-trained NLP model from Hugging Face.
      **Category Mapping**: The `category_mapping` dictionary simplifies book genres into broader categories (`Fiction`, `Nonfiction`, `Children's Fiction`, etc.), which are assigned to books via `.map()`.
      These broarder mapping is based on the top categories in the original dataset.
-     **Zero-Shot Classification Pipeline**: The `facebook/bart-large-mnli` model is loaded using Hugging Face’s `pipeline`, with `device="mps"` to run on Apple Silicon GPUs. 
+     **Zero-Shot Classification Pipeline**: The `facebook/bart-large-mnli` model is loaded using Hugging Face’s `pipeline`. 
      **Single Prediction Example**:  
      - A sample book description from the `"Fiction"` category is selected.  
      - The model predicts whether it falls under `"Fiction"` or `"Nonfiction"` by returning probability scores for each category.  
