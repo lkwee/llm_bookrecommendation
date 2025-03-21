@@ -1,5 +1,7 @@
 ### LLM BOOK RECOMMENDATION
 
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/5e737795-1d86-42e9-bb9e-75c7c94fff4c" />
+<br>
 The project is a book recommendation using open sourced LLM models from HuggingFace, Langchain and OpenAI.
 The data is obtained from Kaggle https://www.kaggle.com/datasets/dylanjcastillo/7k-books-with-metadata/data, which is then examined, cleaned and pre-processed using Pandas library in Jupyter Notebook.
 <br> 
@@ -78,8 +80,8 @@ The main book recommendation comprises of three components: vector search for se
   <br>This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
 <br>
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
-<br> This is the final look.<br><br>
-<img width="925" alt="image" src="https://github.com/user-attachments/assets/5e737795-1d86-42e9-bb9e-75c7c94fff4c" />
+
+
 
 
 
