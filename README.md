@@ -79,7 +79,6 @@ The main book recommendation comprises of three components: vector search for se
 <br>
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
 <br>The final look is the following.
-<br>
 ![alt text](https://github.com/lkwee/llm_bookrecommendation/blob/main/WebUI.jpg)
 
 
