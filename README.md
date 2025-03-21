@@ -6,7 +6,7 @@ The data is obtained from Kaggle https://www.kaggle.com/datasets/dylanjcastillo/
 <br> 
 **Setting up the Environment**
 <br> The tutorial from freeCodeCamp.org is using Pycharm but this project is created using Conda environment with libraries in requirements.txt.
-It is also necessary to obtain API keys from HuggingFace (free) and OpenAI (for a small fee) in order to run the vector search model.
+It is also necessary to obtain API keys from HuggingFace (free) and OpenAI (for a small fee) in order to run the vector search model, and then save them into the .env file.
 <br>
 <br> 
 **Exploratory Data Analysis**
@@ -76,6 +76,10 @@ The main book recommendation comprises of three components: vector search for se
      - Converts **emotion scores** into a DataFrame.  
      - Merges results with the original book dataset on `isbn13`, ensuring each book has its associated **emotion scores**.  
   <br>This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
-
+<br>
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
-<br> Credit: freeCodeCamp.org
+<br> This is the final look.
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/5e737795-1d86-42e9-bb9e-75c7c94fff4c" />
+
+
+
