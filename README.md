@@ -76,9 +76,9 @@ The main book recommendation comprises of three components: vector search for se
      - Converts **emotion scores** into a DataFrame.  
      - Merges results with the original book dataset on `isbn13`, ensuring each book has its associated **emotion scores**.  
   <br>This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
-
+<br>
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
-The final look is the following.
+<br>The final look is the following.
 <br>
 ![alt text](https://github.com/lkwee/llm_bookrecommendation/blob/main/WebUI.jpg)
 
