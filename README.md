@@ -78,7 +78,7 @@ The main book recommendation comprises of three components: vector search for se
   <br>This method enables **emotion-based book categorization**, useful for **reader sentiment analysis**, **recommendation systems**, or **mood-based book searches**. 
 <br>
 Lastly, Gradio is used to run the web interface locally to access the final book recommendation.
-<br> This is the final look.
+<br> This is the final look.<br><br>
 <img width="925" alt="image" src="https://github.com/user-attachments/assets/5e737795-1d86-42e9-bb9e-75c7c94fff4c" />
 
 
